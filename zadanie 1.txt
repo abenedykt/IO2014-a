@@ -1,25 +1,13 @@
 Czubienko Sebastian
-<<<<<<< HEAD
 Ormaniec Wiatrak
-Kawik Adam
+Kawik Józef
 Graczek Pawe³
 Dariusz Myszka
 Sierakowski Kamil
 Konieczny Marek
 Duda Pawe³
-Adamus Przemys³aw
+Adamus Przemys³awAcki
 Bizoñ Krzysztof
-=======
-Ormaniec Marek
-Kawik Józek
-Graczek Marek
-Dariusz Myszka
-Sierakowski Kamil
-Konieczny Marlena
-Duda Pawe³
-Adamus Przemys³aw
-Bizoñ KrzyŒ
->>>>>>> 8a898d1ddcf9ef7fa618b4a0f350a484465ac904
 Ficek Rafa³
 Ples Rafa³22222222222
 Pysz Rafa³
