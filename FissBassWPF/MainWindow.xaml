@@ -1,0 +1,8 @@
+﻿<Window x:Class="FissBassWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <TextBox Name="Okno" HorizontalAlignment="Left" Height="299" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="497" Margin="10,10,0,0" VerticalScrollBarVisibility="Auto" TextChanged="Okno_TextChanged"/>
+    </Grid>
+</Window>
