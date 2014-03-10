@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
+using System.Xml.Serialization;
 using TDD_lab_01;
 using System.Data;
 using System.IO;
@@ -24,15 +27,17 @@ namespace FizzBuzzGame_lab1
             StreamWriter f = new FileInfo(@"Napisy.txt").CreateText();
             ZapisDoXML xm = new ZapisDoXML();
 
-
-            for (int i = 1; i < x; i++)
+            for (int i = 1; i <= x; i++)
             {
-                var co = fb.Play(i).ToString();
+                string co = fb.Play(i).ToString();
                 f.WriteLine(co);
-                xm.ZapiszDoFormatuXML();
-            }  
+
+                xm.ZapiszDoFormatuXML(new[] {co});
+            }
             f.Close();
         }
+
+       
     }
 
     interface Zapisywaczka
@@ -45,26 +50,35 @@ namespace FizzBuzzGame_lab1
         private XmlDocument xDoc;
         public void ZapiszDoFormatuXML(IEnumerable<string> kolekcja)
         {
-            using (XmlWriter writter = XmlWriter.Create(@"Napis.xml"))
+
+            // zapis do pliku XML ale tylko ostaniego argumentu
+            foreach (var item in kolekcja)
             {
-                xDoc.CreateElement("Napis.xml");
-                
-                writter.WriteStartDocument();
+                    XDocument src = new XDocument(
+                    new XElement("Liczby",
+                            new XElement("liczba",item)
+                     ));
 
-                foreach (string item in kolekcja)
-                {
-                    if (item != null)
-                    {
-                        writter.WriteStartElement("liczba");
-                        writter.WriteString(item);
-                        writter.WriteEndElement();
-                    }
-                }
-
-                writter.WriteEndDocument();
-                xDoc.Save(writter);
+                src.Save("Napis.xml");
             }
+
+            
+            //writter.WriteStartDocument();
+            //foreach (string item in kolekcja)
+            //{
+            //    if (item != null)
+            //    {
+            //        writter.WriteStartElement("Liczby");
+            //        writter.WriteElementString("Liczba",item);
+            //        writter.WriteEndElement();
+            //    }
+            //}
+            //writter.WriteEndDocument();
+            //writter.Flush();
+            //writter.Close();
+
         }
-	}
+    }
+
 }
 
