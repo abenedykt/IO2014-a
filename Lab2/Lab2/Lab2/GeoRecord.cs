@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Lab2
+﻿namespace Lab2
 {
     public class GeoRecord
     {
@@ -16,20 +10,39 @@ namespace Lab2
         public double MinY { get; set; }
         public double MaxY { get; set; }
 
+        //resharper
+        protected bool Equals(GeoRecord other)
+        {
+            return 
+                string.Equals(NrDziałki, other.NrDziałki) &&
+                X.Equals(other.X) &&
+                Y.Equals(other.Y) &&
+                MinX.Equals(other.MinX) &&
+                MaxX.Equals(other.MaxX) &&
+                MinY.Equals(other.MinY) &&
+                MaxY.Equals(other.MaxY);
+        }
+
         public override bool Equals(object obj)
         {
-            GeoRecord that = obj as GeoRecord;
-            if (that == null)
-                return false;
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            return obj.GetType() == GetType() && Equals((GeoRecord)obj);
+        }
 
-            return
-                this.NrDziałki == that.NrDziałki &&
-                this.X == that.X &&
-                this.Y == that.Y &&
-                this.MinX == that.MinX &&
-                this.MaxX == that.MaxX &&
-                this.MinY == that.MinY &&
-                this.MaxY == that.MaxY;
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hashCode = (NrDziałki != null ? NrDziałki.GetHashCode() : 0);
+                hashCode = (hashCode * 397) ^ X.GetHashCode();
+                hashCode = (hashCode * 397) ^ Y.GetHashCode();
+                hashCode = (hashCode * 397) ^ MinX.GetHashCode();
+                hashCode = (hashCode * 397) ^ MaxX.GetHashCode();
+                hashCode = (hashCode * 397) ^ MinY.GetHashCode();
+                hashCode = (hashCode * 397) ^ MaxY.GetHashCode();
+                return hashCode;
+            }
         }
     }
 }

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace Lab2
 {
@@ -15,52 +15,65 @@ namespace Lab2
         {
             this.fileReader = fileReader;
             this.repository = repository;
+
+            //dirty fix for double format parsing
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
         }
 
-        public IEnumerable<GeoRecord> GetOutput()
+        public IEnumerable<GeoRecord> ParseRecords()
         {
             return fileReader.GetRecords().Select(ProcessRecord);
         }
 
         private GeoRecord ProcessRecord(string record)
         {
-            var values = record.Split(' ', '\n').Where(s => !string.IsNullOrWhiteSpace(s)).ToArray();
-            string nrDziałki = values[0];
-            double x = double.Parse(values[1]);
-            double y = double.Parse(values[2]);
+            var values = record
+                .Split(' ', '\n')
+                .Select(s => s.Trim())
+                .Where(s => !string.IsNullOrWhiteSpace(s))
+                .ToList();
 
-            int numberOfPoints = int.Parse(values[7]);
+            var header = ProcessHeader(values);
+            var areaBoundaries = ProcessPoints(values.Skip(8).ToList());
 
-            var result = ParsePoints(values.Skip(7));
-
-            return new GeoRecord()
+            return new GeoRecord
             {
-                NrDziałki = nrDziałki,
-                X = x,
-                Y = y,
-                MinX = result.Item1,
-                MinY = result.Item2,
-                MaxX = result.Item3,
-                MaxY = result.Item4
+                NrDziałki = header.Item1,
+                X = header.Item2,
+                Y = header.Item3,
+                MinX = areaBoundaries.Item1,
+                MaxX = areaBoundaries.Item2,
+                MinY = areaBoundaries.Item3,
+                MaxY = areaBoundaries.Item4
             };
         }
 
-        private Tuple<double, double, double, double> ParsePoints(IEnumerable<string> values)
+        private Tuple<string, double, double> ProcessHeader(List<string> values)
         {
-            var list = values.ToList();
+            var nrDziałki = values[0];
+            var x = values[1].ToDouble();
+            var y = values[2].ToDouble();
 
-            var lines = Partition(list, 7);
-
-            var x = lines.Select(line => line[1]).Select(s => double.Parse(s));
-            var y = lines.Select(line => line[2]).Select(s => double.Parse(s));
-
-            return Tuple.Create(x.Min(), x.Max(), y.Min(), y.Max());
+            return Tuple.Create(nrDziałki, x, y);
         }
 
-        public static IEnumerable<List<T>> Partition<T>(List<T> source, int size)
+        private Tuple<double, double, double, double> ProcessPoints(List<string> values)
         {
-            for (int i = 0; i < Math.Ceiling(source.Count / (Double)size); i++)
-                yield return new List<T>(source.Skip(size * i).Take(size));
+            var lines = values
+                .Partition(9)
+                .Select(seq => seq.ToList())
+                .ToList();
+
+            Func<int, List<double>> getColumnOfIndex =
+                i => lines
+                    .Select(line => line[i])
+                    .Select(double.Parse)
+                    .ToList();
+
+            var x = getColumnOfIndex(1);
+            var y = getColumnOfIndex(2);
+
+            return Tuple.Create(x.Min(), x.Max(), y.Min(), y.Max());
         }
     }
 }

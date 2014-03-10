@@ -1,17 +1,13 @@
 ﻿using Lab2;
 using NSubstitute;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace Lab2TEST
 {
     public class GeoImportTest
     {
-        private readonly string testData =
+        private const string TestData =
 @"               1.1-800/128
         5544943.71        6532099.62         5544943.71        6532099.62 N  7
 7
@@ -28,11 +24,11 @@ namespace Lab2TEST
         public void Test()
         {
             var fileReader = Substitute.For<IGeoFileReader>();
-            fileReader.GetRecords().Returns(new string [] {testData});
+            fileReader.GetRecords().Returns(new[] { TestData });
 
             var repository = Substitute.For<IGeoRepository>();
 
-            var record = new GeoRecord() 
+            var record = new GeoRecord
             {
                 NrDziałki = "1.1-800/128",
                 X = 5544943.71,
@@ -44,9 +40,9 @@ namespace Lab2TEST
             };
 
             var import = new GeoImport(fileReader, repository);
-            var result = import.GetOutput().First();
+            var result = import.ParseRecords().First();
 
-            Assert.True(record.Equals(result));
+            Assert.Equal(record, result);
         }
     }
 }
