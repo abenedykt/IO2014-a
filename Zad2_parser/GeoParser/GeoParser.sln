@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoParser", "GeoParser.csproj", "{3D3866CE-1300-4AEB-9C4C-14F0B5BB7418}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parser", "..\Parser\Parser.csproj", "{90367FA7-2E1C-4C67-A509-6E29BD8AC726}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParserTest", "ParserTest\ParserTest.csproj", "{A08FC6EB-A02E-4C74-94E0-607BC0EF315C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D3866CE-1300-4AEB-9C4C-14F0B5BB7418}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D3866CE-1300-4AEB-9C4C-14F0B5BB7418}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D3866CE-1300-4AEB-9C4C-14F0B5BB7418}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D3866CE-1300-4AEB-9C4C-14F0B5BB7418}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90367FA7-2E1C-4C67-A509-6E29BD8AC726}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90367FA7-2E1C-4C67-A509-6E29BD8AC726}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90367FA7-2E1C-4C67-A509-6E29BD8AC726}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90367FA7-2E1C-4C67-A509-6E29BD8AC726}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A08FC6EB-A02E-4C74-94E0-607BC0EF315C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A08FC6EB-A02E-4C74-94E0-607BC0EF315C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A08FC6EB-A02E-4C74-94E0-607BC0EF315C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A08FC6EB-A02E-4C74-94E0-607BC0EF315C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
