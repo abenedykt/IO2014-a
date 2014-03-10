@@ -22,10 +22,10 @@ namespace Lab2
 
         public IEnumerable<GeoRecord> ParseRecords()
         {
-            return fileReader.GetRecords().Select(ProcessRecord);
+            return fileReader.GetRecords().Select(ParseRecord);
         }
 
-        private GeoRecord ProcessRecord(string record)
+        private GeoRecord ParseRecord(string record)
         {
             var values = record
                 .Split(' ', '\n')
@@ -33,8 +33,8 @@ namespace Lab2
                 .Where(s => !string.IsNullOrWhiteSpace(s))
                 .ToList();
 
-            var header = ProcessHeader(values);
-            var areaBoundaries = ProcessPoints(values.Skip(8).ToList());
+            var header = ParseHeader(values);
+            var areaBoundaries = ParsePoints(values.Skip(8));
 
             return new GeoRecord
             {
@@ -48,7 +48,7 @@ namespace Lab2
             };
         }
 
-        private Tuple<string, double, double> ProcessHeader(List<string> values)
+        private Tuple<string, double, double> ParseHeader(List<string> values)
         {
             var nrDziałki = values[0];
             var x = values[1].ToDouble();
@@ -57,7 +57,7 @@ namespace Lab2
             return Tuple.Create(nrDziałki, x, y);
         }
 
-        private Tuple<double, double, double, double> ProcessPoints(List<string> values)
+        private Tuple<double, double, double, double> ParsePoints(IEnumerable<string> values)
         {
             var lines = values
                 .Partition(9)
