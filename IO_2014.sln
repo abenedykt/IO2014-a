@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDD_Lab_01", "TDD_Lab_01\TDD_Lab_01.csproj", "{092A060B-9B53-47A7-B48B-7ED232279935}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FissBassConsole", "FissBassConsole\FissBassConsole.csproj", "{C31952FE-9122-4BC9-A7C1-84C6C736A891}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FissBassWPF", "FissBassWPF\FissBassWPF.csproj", "{3FD95D71-CDA4-4FEC-B270-4F57388B37DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDD_Lab_02", "TDD_Lab_02\TDD_Lab_02.csproj", "{205E26E4-00CA-45C3-BF45-146CAE2C206F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{3FD95D71-CDA4-4FEC-B270-4F57388B37DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FD95D71-CDA4-4FEC-B270-4F57388B37DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FD95D71-CDA4-4FEC-B270-4F57388B37DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{205E26E4-00CA-45C3-BF45-146CAE2C206F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{205E26E4-00CA-45C3-BF45-146CAE2C206F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{205E26E4-00CA-45C3-BF45-146CAE2C206F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{205E26E4-00CA-45C3-BF45-146CAE2C206F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
