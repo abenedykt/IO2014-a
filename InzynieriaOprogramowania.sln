@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{72E9E9
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI lab 2", "UI lab 2\UI lab 2.csproj", "{6887ABEA-0978-47A7-8720-BDF6549ADFFD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDD_NSubstitude_Lab3", "TDD_NSubstitude_Lab3\TDD_NSubstitude_Lab3.csproj", "{14F0B33B-1D23-49B6-B6BF-F242487A3D44}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{6887ABEA-0978-47A7-8720-BDF6549ADFFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6887ABEA-0978-47A7-8720-BDF6549ADFFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6887ABEA-0978-47A7-8720-BDF6549ADFFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14F0B33B-1D23-49B6-B6BF-F242487A3D44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14F0B33B-1D23-49B6-B6BF-F242487A3D44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14F0B33B-1D23-49B6-B6BF-F242487A3D44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14F0B33B-1D23-49B6-B6BF-F242487A3D44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
