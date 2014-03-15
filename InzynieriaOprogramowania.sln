@@ -16,6 +16,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI lab 2", "UI lab 2\UI lab
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDD_NSubstitude_Lab3", "TDD_NSubstitude_Lab3\TDD_NSubstitude_Lab3.csproj", "{14F0B33B-1D23-49B6-B6BF-F242487A3D44}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zadanie GEO - Lab3", "Zadanie GEO - Lab3\Zadanie GEO - Lab3.csproj", "{F452C166-F0E1-431E-833B-55362528B424}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geo.Test", "Geo.Test\Geo.Test.csproj", "{906DB5E6-1E48-4561-9855-418CA7496468}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +42,14 @@ Global
 		{14F0B33B-1D23-49B6-B6BF-F242487A3D44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14F0B33B-1D23-49B6-B6BF-F242487A3D44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14F0B33B-1D23-49B6-B6BF-F242487A3D44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F452C166-F0E1-431E-833B-55362528B424}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F452C166-F0E1-431E-833B-55362528B424}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F452C166-F0E1-431E-833B-55362528B424}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F452C166-F0E1-431E-833B-55362528B424}.Release|Any CPU.Build.0 = Release|Any CPU
+		{906DB5E6-1E48-4561-9855-418CA7496468}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{906DB5E6-1E48-4561-9855-418CA7496468}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{906DB5E6-1E48-4561-9855-418CA7496468}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{906DB5E6-1E48-4561-9855-418CA7496468}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
