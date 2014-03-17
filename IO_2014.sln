@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FissBassWPF", "FissBassWPF\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDD_Lab_02", "TDD_Lab_02\TDD_Lab_02.csproj", "{205E26E4-00CA-45C3-BF45-146CAE2C206F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDD_Lab_02.Test", "TDDD_Lab_02.Test\TDD_Lab_02.Test.csproj", "{8FEF0B92-DF16-4C2A-AB8B-91B4AFE2757C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{205E26E4-00CA-45C3-BF45-146CAE2C206F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{205E26E4-00CA-45C3-BF45-146CAE2C206F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{205E26E4-00CA-45C3-BF45-146CAE2C206F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FEF0B92-DF16-4C2A-AB8B-91B4AFE2757C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FEF0B92-DF16-4C2A-AB8B-91B4AFE2757C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FEF0B92-DF16-4C2A-AB8B-91B4AFE2757C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FEF0B92-DF16-4C2A-AB8B-91B4AFE2757C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
