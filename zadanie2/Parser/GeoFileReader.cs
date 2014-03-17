@@ -8,5 +8,6 @@ namespace Parser
 {
     class GeoFileReader
     {
+
     }
 }
