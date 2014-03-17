@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using NSubstitute;
-using Xunit;
 using Zadanie_GEO___Lab3;
+using Xunit;
 
 namespace Geo.Test
 {
@@ -24,7 +20,7 @@ namespace Geo.Test
                       1-7923        5544969.02        6532117.26        5544969.02        6532117.26   0 N N  7";
 
         [Fact]
-        public void Test()
+        public void CzyRekord()
         {
             var fileReader = Substitute.For<IGeoFileReader>();
             fileReader.GetRecords().Returns(new[] { DaneTestowe });
@@ -47,6 +43,42 @@ namespace Geo.Test
 
             Assert.Equal(record, result);
         }
+
+        [Fact]
+        public void CzyRekordZawieraPusteDane()
+        {
+            var fileReader = Substitute.For<IGeoFileReader>();
+            fileReader.GetRecords().Returns(new[] { DaneTestowe });
+
+            var repository = Substitute.For<IGeoRepository>();   
+        }
+
+        [Fact]
+        public void CzyInnyRekord()
+        {
+            var fileReader = Substitute.For<IGeoFileReader>();
+            fileReader.GetRecords().Returns(new[] { DaneTestowe });
+
+            var repository = Substitute.For<IGeoRepository>();
+
+            var record = new Rekord
+            {
+                NrDziałki = "1.1-800/128",
+                X = 5544943.71,
+                Y = 6532099.62,
+                MinX = 5544907.94,
+                MaxX = 5544975.70,
+                MinY = 6532075.96,
+                MaxY = 6532117.26
+            };
+
+            var import = new Import(fileReader, repository);
+            var result = import.PobierzRekordy().First();
+
+            Assert.Equal(record, result);
+        }
+
+
     }
 
     

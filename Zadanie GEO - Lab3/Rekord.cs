@@ -15,8 +15,6 @@ namespace Zadanie_GEO___Lab3
         public double MaxX { get; set; }
         public double MinY { get; set; }
         public double MaxY { get; set; }
-
-        //resharper
         protected bool Equals(Rekord other)
         {
             return
