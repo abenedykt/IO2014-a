@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9B195193-CF55-4816-8B70-67905E4C3BF4}</ProjectGuid>
+    <ProjectGuid>{1A4DB4CF-CC9A-4ECD-81E1-928027610737}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Geo</RootNamespace>
@@ -41,8 +41,6 @@
   <ItemGroup>
     <Compile Include="GeoImport.cs" />
     <Compile Include="GeoRecord.cs" />
-    <Compile Include="IGeoFileReader.cs" />
-    <Compile Include="IGeoRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

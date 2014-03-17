@@ -15,5 +15,18 @@ namespace Geo
         public double MaxX { get; set; }
         public double MinY { get; set; }
         public double MaxY { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            GeoRecord other = (GeoRecord)obj;
+            return
+                string.Equals(NrDziałki, other.NrDziałki) &&
+                X.Equals(other.X) &&
+                Y.Equals(other.Y) &&
+                MinX.Equals(other.MinX) &&
+                MaxX.Equals(other.MaxX) &&
+                MinY.Equals(other.MinY) &&
+                MaxY.Equals(other.MaxY);
+        }
     }
 }

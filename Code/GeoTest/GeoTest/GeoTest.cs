@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xunit;
-using NSubstitute;
 using Geo;
 
-namespace Lab2Test
+namespace GeoTest
 {
     public class GeoTest
     {
-        private const string testString = @"               1.1-800/128
+        private const string TestData =
+@"               1.1-800/128
         5544943.71        6532099.62         5544943.71        6532099.62 N  7
 7
               1-7923        5544969.02        6532117.26        5544969.02        6532117.26   0 N N  7
@@ -26,11 +26,6 @@ namespace Lab2Test
         [Fact]
         public void Test()
         {
-            var fileReader = Substitute.For<IGeoFileReader>();
-            fileReader.GetRecords().Returns(new[] { testString });
-
-            var repository = Substitute.For<IGeoRepository>();
-
             var record = new GeoRecord
             {
                 NrDziałki = "1.1-800/128",
@@ -42,7 +37,9 @@ namespace Lab2Test
                 MaxY = 6532117.26
             };
 
-            var import = new GeoImport(fileReader, repository);
+            var result = new GeoImport(TestData).ParseValueString().First();
+
+            Assert.Equal(record, result);   
         }
     }
 }
