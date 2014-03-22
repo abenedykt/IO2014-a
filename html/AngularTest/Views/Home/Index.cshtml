@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div ng-controller="mainController">
+    <h3>FizzBuzz</h3>
+    <hr />
+    <div class="row">
+        <form>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="main-input">Wprowadź liczbę</label>
+                    <input name="main-input" type="text" ng-model="input" class="form-control" />
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label>Wynik</label>
+                    <ul>
+                        <li ng-repeat="number in output(input)">{{number}}</li>
+                    </ul>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts
+{
+    <script src="~/Scripts/app/main.js"></script>
+}
