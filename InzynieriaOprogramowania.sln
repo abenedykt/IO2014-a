@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDD_lab_01", "TDD_lab_01\TDD_lab_01.csproj", "{E32F0A33-1BE7-4600-BADA-BE83667B6E6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzzGame_lab1", "FizzBuzzGame_lab1\FizzBuzzGame_lab1.csproj", "{3DC2DBAF-AADF-4E0C-B781-827B92387F5D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{72E9E9F5-2CF0-4609-8432-72D33AE4BD37}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI lab 2", "UI lab 2\UI lab 2.csproj", "{6887ABEA-0978-47A7-8720-BDF6549ADFFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDD_NSubstitude_Lab3", "TDD_NSubstitude_Lab3\TDD_NSubstitude_Lab3.csproj", "{14F0B33B-1D23-49B6-B6BF-F242487A3D44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zadanie GEO - Lab3", "Zadanie GEO - Lab3\Zadanie GEO - Lab3.csproj", "{F452C166-F0E1-431E-833B-55362528B424}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geo.Test", "Geo.Test\Geo.Test.csproj", "{906DB5E6-1E48-4561-9855-418CA7496468}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E32F0A33-1BE7-4600-BADA-BE83667B6E6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E32F0A33-1BE7-4600-BADA-BE83667B6E6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E32F0A33-1BE7-4600-BADA-BE83667B6E6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E32F0A33-1BE7-4600-BADA-BE83667B6E6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DC2DBAF-AADF-4E0C-B781-827B92387F5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DC2DBAF-AADF-4E0C-B781-827B92387F5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DC2DBAF-AADF-4E0C-B781-827B92387F5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DC2DBAF-AADF-4E0C-B781-827B92387F5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6887ABEA-0978-47A7-8720-BDF6549ADFFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6887ABEA-0978-47A7-8720-BDF6549ADFFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6887ABEA-0978-47A7-8720-BDF6549ADFFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6887ABEA-0978-47A7-8720-BDF6549ADFFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14F0B33B-1D23-49B6-B6BF-F242487A3D44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14F0B33B-1D23-49B6-B6BF-F242487A3D44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14F0B33B-1D23-49B6-B6BF-F242487A3D44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14F0B33B-1D23-49B6-B6BF-F242487A3D44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F452C166-F0E1-431E-833B-55362528B424}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F452C166-F0E1-431E-833B-55362528B424}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F452C166-F0E1-431E-833B-55362528B424}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F452C166-F0E1-431E-833B-55362528B424}.Release|Any CPU.Build.0 = Release|Any CPU
+		{906DB5E6-1E48-4561-9855-418CA7496468}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{906DB5E6-1E48-4561-9855-418CA7496468}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{906DB5E6-1E48-4561-9855-418CA7496468}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{906DB5E6-1E48-4561-9855-418CA7496468}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
