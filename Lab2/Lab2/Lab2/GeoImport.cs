@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Threading;
 
 namespace Lab2
@@ -27,6 +28,8 @@ namespace Lab2
 
         private GeoRecord ParseRecord(string record)
         {
+            const int headerLength = 7;
+
             var values = record
                 .Split(' ', '\n')
                 .Select(s => s.Trim())
@@ -34,7 +37,7 @@ namespace Lab2
                 .ToList();
 
             var header = ParseHeader(values);
-            var areaBoundaries = ParsePoints(values.Skip(8));
+            var areaBoundaries = ParsePoints(values.Skip(headerLength));
 
             return new GeoRecord
             {
@@ -59,16 +62,28 @@ namespace Lab2
 
         private Tuple<double, double, double, double> ParsePoints(IEnumerable<string> values)
         {
-            var lines = values
+            var pointCount = values.First().ToInt();
+            var pointsData = values.Skip(1);
+
+            var lines = pointsData
                 .Partition(9)
                 .Select(seq => seq.ToList())
                 .ToList();
 
             Func<int, List<double>> getColumnOfIndex =
-                i => lines
-                    .Select(line => line[i])
-                    .Select(double.Parse)
-                    .ToList();
+                i =>
+                {
+                    var column = lines
+                        .Select(line => line[i])
+                        .Select(double.Parse)
+                        .ToList();
+
+                    if (column.Count != pointCount)
+                        throw new ArgumentException();
+
+                    return column;
+                };
+
 
             var x = getColumnOfIndex(1);
             var y = getColumnOfIndex(2);

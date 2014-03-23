@@ -29,5 +29,10 @@ namespace Lab2
         {
             return double.Parse(str);
         }
+
+        public static int ToInt(this string str)
+        {
+            return int.Parse(str);
+        }
     }
 }
