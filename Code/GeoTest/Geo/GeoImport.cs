@@ -18,13 +18,48 @@ namespace Geo
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
         }
 
+        private List<String> GetValues()
+        {
+            var values = this.valueString
+                       .Split(' ', '\n')
+                       .Select(n => n.Trim())
+                       .Where(n => !string.IsNullOrWhiteSpace(n))
+                       .ToList();
+
+            CheckValues(values);
+
+            return values;
+        }
+
+        private void CheckValues(List<string> values)
+        {
+            if (values.Count == 0)
+            {
+                throw new ArgumentNullException();
+            }
+
+            int k = 0;
+            for (; k < values.Count; )
+            {
+                try
+                {
+                    k += (Convert.ToInt32(values[k + 7]) * 9) + 8;
+                }
+                catch (FormatException)
+                {
+                    throw new FormatException();
+                }
+            }
+
+            if (k != values.Count)
+            {
+                throw new ArgumentException();
+            }
+        }
+
         public List<GeoRecord> ParseValueString()
         {
-            var value = this.valueString
-                        .Split(' ', '\n')
-                        .Select(n => n.Trim())
-                        .Where(n => !string.IsNullOrWhiteSpace(n))
-                        .ToList();
+            var values = GetValues();
 
             List<GeoRecord> result = new List<GeoRecord>();
 
@@ -32,32 +67,39 @@ namespace Geo
             List<double> listaYTmp;
             int i = 0;
 
-            while (i < value.Count)
+            try
             {
-                int j = i;
-                listaXTmp = new List<double>();
-                listaYTmp = new List<double>();
-                int jump = (Convert.ToInt32(value[i + 7]) * 9) + 8;
-
-                while ((j + 9) < (i + jump))
+                while (i < values.Count)
                 {
-                    listaXTmp.Add(Convert.ToDouble(value[j + 9]));
-                    listaYTmp.Add(Convert.ToDouble(value[j + 10]));
-                    j += 9;
+                    int j = i;
+                    listaXTmp = new List<double>();
+                    listaYTmp = new List<double>();
+                    int jump = (Convert.ToInt32(values[i + 7]) * 9) + 8;
+
+                    while ((j + 9) < (i + jump))
+                    {
+                        listaXTmp.Add(Convert.ToDouble(values[j + 9]));
+                        listaYTmp.Add(Convert.ToDouble(values[j + 10]));
+                        j += 9;
+                    }
+
+                    result.Add(new GeoRecord
+                    {
+                        NrDziałki = values[i],
+                        X = Convert.ToDouble(values[i + 1]),
+                        Y = Convert.ToDouble(values[i + 2]),
+                        MinX = listaXTmp.Min(),
+                        MinY = listaYTmp.Min(),
+                        MaxX = listaXTmp.Max(),
+                        MaxY = listaYTmp.Max()
+                    });
+
+                    i += jump;
                 }
-
-                result.Add(new GeoRecord
-                {
-                    NrDziałki = value[i],
-                    X = Convert.ToDouble(value[i + 1]),
-                    Y = Convert.ToDouble(value[i + 2]),
-                    MinX = listaXTmp.Min(),
-                    MinY = listaYTmp.Min(),
-                    MaxX = listaXTmp.Max(),
-                    MaxY = listaYTmp.Max()
-                });
-
-                i += jump;
+            }
+            catch (FormatException)
+            {
+                throw new FormatException();
             }
 
             return result;
