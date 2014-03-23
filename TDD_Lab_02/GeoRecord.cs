@@ -2,18 +2,18 @@
 {
     public class GeoRecord
     {
-        public string NrDziałki { get; set; }
-        public double X { get; set; }
-        public double Y { get; set; }
-        public double MinX { get; set; }
-        public double MaxX { get; set; }
-        public double MinY { get; set; }
-        public double MaxY { get; set; }
+        public string NrDzialki { private get; set; }
+        public double X { private get; set; }
+        public double Y { private get; set; }
+        public double MinX { private get; set; }
+        public double MaxX { private get; set; }
+        public double MinY { private get; set; }
+        public double MaxY { private get; set; }
 
-        protected bool Equals(GeoRecord other)
+        private bool Equals(GeoRecord other)
         {
             return
-                string.Equals(NrDziałki, other.NrDziałki) &&
+                string.Equals(NrDzialki, other.NrDzialki) &&
                 X.Equals(other.X) &&
                 Y.Equals(other.Y) &&
                 MinX.Equals(other.MinX) &&
@@ -33,7 +33,7 @@
         {
             unchecked
             {
-                var hashCode = (NrDziałki != null ? NrDziałki.GetHashCode() : 0);
+                var hashCode = (NrDzialki != null ? NrDzialki.GetHashCode() : 0);
                 hashCode = (hashCode * 397) ^ X.GetHashCode();
                 hashCode = (hashCode * 397) ^ Y.GetHashCode();
                 hashCode = (hashCode * 397) ^ MinX.GetHashCode();

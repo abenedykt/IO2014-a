@@ -26,6 +26,7 @@ namespace TDD_Lab_02
 
         private GeoRecord ParseRecord(string record)
         {
+            const int headerLenght = 7;
             var values = record
                 .Split(' ', '\n')
                 .Select(s => s.Trim())
@@ -33,11 +34,11 @@ namespace TDD_Lab_02
                 .ToList();
 
             var header = ParseHeader(values);
-            var areaBoundaries = ParsePoints(values.Skip(8));
+            var areaBoundaries = ParsePoints(values.Skip(headerLenght));
 
             return new GeoRecord
             {
-                NrDziałki = header.Item1,
+                NrDzialki = header.Item1,
                 X = header.Item2,
                 Y = header.Item3,
                 MinX = areaBoundaries.Item1,
@@ -49,25 +50,39 @@ namespace TDD_Lab_02
 
         private Tuple<string, double, double> ParseHeader(List<string> values)
         {
-            var nrDziałki = values[0];
+            var nrDzialki = values[0];
             var x = values[1].ToDouble();
             var y = values[2].ToDouble();
 
-            return Tuple.Create(nrDziałki, x, y);
+            return Tuple.Create(nrDzialki, x, y);
         }
 
         private Tuple<double, double, double, double> ParsePoints(IEnumerable<string> values)
         {
-            var lines = values
+            var pointCount = values.First().ToInt();
+
+            var pointsData = values.Skip(1);
+
+            var lines = pointsData
                 .Partition(9)
                 .Select(seq => seq.ToList())
                 .ToList();
 
             Func<int, List<double>> getColumnOfIndex =
-                i => lines
-                    .Select(line => line[i])
-                    .Select(double.Parse)
-                    .ToList();
+                i =>
+                {
+                    var columns = lines
+                        .Select(line => line[i])
+                        .Select(double.Parse)
+                        .ToList();
+
+                    if (columns.Count != pointCount)
+                    {
+                        throw new ArgumentException();
+                    }
+
+                    return columns;
+                };
 
             var x = getColumnOfIndex(1);
             var y = getColumnOfIndex(2);

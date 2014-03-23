@@ -13,7 +13,7 @@ namespace TDD_Lab_02
             }
         }
 
-        public static IEnumerable<T> GetOneCycle<T>(IEnumerator<T> @enum, int size)
+        private static IEnumerable<T> GetOneCycle<T>(IEnumerator<T> @enum, int size)
         {
             var i = 1;
             do
@@ -23,9 +23,14 @@ namespace TDD_Lab_02
             } while (@enum.MoveNext() && i < size);
         }
 
-        public static double ToDouble(this string str)
+        public static double ToDouble(this string s)
         {
-            return double.Parse(str);
+            return double.Parse(s);
+        }
+
+        public static int ToInt(this string s)
+        {
+            return int.Parse(s);
         }
     }
 }
