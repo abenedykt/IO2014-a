@@ -11,13 +11,13 @@
         <div class="input-group" style="margin: 50px;">
             <input type="text" ng-model="FBInput" class="form-control">
             <span class="input-group-btn">
-                <button class="btn btn-primary" type="button">Oblicz!</button>
+                <button class="btn btn-primary" ng-click="zapytka(FBInput)" type="button">Oblicz!</button>
             </span>
         </div><!-- /input-group -->
     </div>
     <div class="col-lg-6" style="margin:30px auto;">
         <ol>
-            <li ng-repeat="fizzbuzz in ZwrocWyniki(FBInput)">{{ fizzbuzz }}</li>
+            <li ng-repeat="fizzbuzz in numbers">{{ fizzbuzz.Value }}</li>
         </ol>
     </div>
 </div>

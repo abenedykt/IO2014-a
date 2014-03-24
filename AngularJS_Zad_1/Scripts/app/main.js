@@ -1,16 +1,24 @@
-﻿var fizzBuzzApp = angular.module('fizzBuzzApp', []);
-var url = 'api/FizzBuzz/';
+﻿var fizzBuzzController = angular.module('fizzBuzzApp', []);
 
-fizzBuzzApp.factory('fizzBuzzFactory', function ($http) {
-    return {
-        getFb: function (index) {
-            return $http.get(url+index);
-        }
-    };
-});
-fizzBuzzApp.controller('FBListCtrl', function ($scope,$http) {
-    $scope.ZwrocWyniki = function (index) {
+fizzBuzzController.factory('dataFactory', ['$http', function ($http) {
 
-        return $http.get(url+index);
-    };
-});
+        var urlBase = 'api/FizzBuzz/';
+        var dataFactory = {};
+
+        dataFactory.getFb = function (id) {
+            return $http.get(urlBase + id);
+        };
+
+        return dataFactory;
+    }]);
+
+fizzBuzzController.controller('FBListCtrl', ['$scope', 'dataFactory',
+        function ($scope, dataFactory) {
+            $scope.zapytka = function(index) {
+                dataFactory.getFb(index).success(function(data) {
+                    $scope.numbers = data;
+                });
+            };
+
+
+        }]);

@@ -10,16 +10,17 @@ namespace AngularJS_Zad_1.Controllers
 {
     public class FizzBuzzController : ApiController
     {
-        public string Get(int id)
+        public HttpResponseMessage Get(int id)
         {
-            var fb = new FissBass();
+            var fb = new FissBass(new string[1]{id.ToString()});
 
-            if (id == 0)
+            if (!fb.ReturnCollection().Any())
             {
                 throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));
             }
 
-            return fb.Play(id).ToString();
+            return Request.CreateResponse<object>(HttpStatusCode.OK, fb.ReturnCollection().Select(item => item ).ToArray());
+            
         } 
     }
 }
