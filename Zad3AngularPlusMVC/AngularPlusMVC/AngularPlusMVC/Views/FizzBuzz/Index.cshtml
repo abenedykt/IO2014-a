@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<script type="text/javascript">
+    var app = angular.module('ng-app', []);
+    app.controller('fizzBuzzController', function ($scope, $http) {
+        $scope.fizzBuzz = function () {
+            $http.get('/FizzBuzz/GetResult/' + $scope.count).success(function (response) { $scope.arr = response; });
+
+        }
+        
+        $scope.fizzBuzzData = function () {
+            return $scope.arr;
+        }
+    });
+</script>
+
+<div ng-controller="fizzBuzzController">
+    <label>Number:</label>
+    <input type="text" ng-model="count" placeholder="Enter a name here">
+    <button ng-click="fizzBuzz()">Go!</button>
+    <hr>
+    <h1>Number: {{count}}!</h1>
+  
+    <li ng-repeat="i in fizzBuzzData()"><span>{{i}}</span></li>
+
+</div>
+
