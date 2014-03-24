@@ -14,6 +14,7 @@ namespace Geo.Test2
     {
         public class GeoImportTest
         {
+
             private const string DaneTestowe =
     @"               1.1-800/128
         5544943.71        6532099.62         5544943.71        6532099.62 N  7
