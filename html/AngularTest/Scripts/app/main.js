@@ -1,8 +1,13 @@
-﻿function mainController($scope) {
-    var fizzBuzz = ["1", "2", "Fizz", "4", "Buzz", "6", "7", "8"];
-	$scope.input = 1;
+﻿function mainController($scope, $http) {
+    $scope.input = 1;
+    $scope.output = [];
 
-	$scope.output = function(index) {
-		return fizzBuzz.slice(0, index);
-	};
+    $scope.get = function () {
+        var input = $scope.input;
+        if (input) {
+            $http.get("/api/fizzbuzz?count=" + input).success(function (data) {
+                $scope.output = data;
+            });
+        }
+    };
 }

@@ -10,7 +10,7 @@
             <div class="col-sm-4">
                 <div class="form-group">
                     <label for="main-input">Wprowadź liczbę</label>
-                    <input name="main-input" type="text" ng-model="input" class="form-control" />
+                    <input name="main-input" type="text" ng-model="input" ng-change="get()" class="form-control" />
                 </div>
             </div>
 
@@ -18,7 +18,7 @@
                 <div class="form-group">
                     <label>Wynik</label>
                     <ul>
-                        <li ng-repeat="number in output(input)">{{number}}</li>
+                        <li ng-repeat="number in output track by $index">{{number}}</li>
                     </ul>
                 </div>
             </div>
