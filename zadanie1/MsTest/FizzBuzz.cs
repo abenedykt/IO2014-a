@@ -7,7 +7,7 @@ namespace MsTest
 {
     public class FizzBuzz
     {
-        internal string Play(int p)
+        public string Play(int p)
         {
             if (p % 15 == 0)
             {

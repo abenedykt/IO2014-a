@@ -58,7 +58,9 @@ namespace Parser
 
         private IEnumerable<string> CoordsColumns(IEnumerable<string> linesWithAllProperties, int count)
         {
-            var columns = linesWithAllProperties.Select(n => n.Split(new char[] {' '}).Skip(1 + count).First());
+            var columns = linesWithAllProperties.Select(
+                n => n.Split(new char[] {' '},StringSplitOptions.RemoveEmptyEntries).Skip(1 + count).First()
+                );
 
             return columns.ToList();
         }

@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "";
+}
+
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body ng-controller="BindModel">
+    <h3>FizzBuzz!</h3>
+    <div class="row">
+        <div class="col-md-2">
+            <input type="text" ng-change="output(input)" ng-model="input" class="form-control" />
+        </div>
+    </div>
+
+    <div class="row" style="margin-top:15px;">
+        <div class="col-md-3">
+            <table class="table table-hover">
+                <tr ng-repeat="number in dane track by $index">
+                    <td>
+                        {{number}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+    <script src="~/Scripts/controllers.js"></script>
+</body>
+</html>

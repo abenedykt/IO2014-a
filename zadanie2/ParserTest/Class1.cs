@@ -53,5 +53,11 @@ namespace ParserTest
 
             Assert.True(result.Equals(record));
         }
+
+        [Fact]
+        private void CoordsColumnsTesting()
+        {
+          
+        }
     }
 }
