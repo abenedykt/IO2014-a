@@ -31,11 +31,22 @@ namespace Parser
 
 
 
-            GeoRecord singleRecord = new GeoRecord(
+            var columnX = CoordsColumns(records.Skip(3), 0);
+            var columnY = CoordsColumns(records.Skip(3), 1);
+            var minMaxX = GeoMinMax(columnX);
+            var minMaxY = GeoMinMax(columnY);
+
+            var singleRecord = new GeoRecord(
                 records[0],
                 GeoCoords(records[1]).Item1,
                 GeoCoords(records[1]).Item2,
+                minMaxX.Item1,
+                minMaxX.Item2,
+                minMaxY.Item1,
+                minMaxY.Item2
                 );
+
+            return singleRecord;
         }
 
         private Tuple<double, double> GeoCoords(string line)
@@ -45,7 +56,12 @@ namespace Parser
             return new Tuple<double, double>(double.Parse(tmp[0]), double.Parse(tmp[1]));
         }
 
-        private 
+        private IEnumerable<string> CoordsColumns(IEnumerable<string> linesWithAllProperties, int count)
+        {
+            var columns = linesWithAllProperties.Select(n => n.Split(new char[] {' '}).Skip(1 + count).First());
+
+            return columns.ToList();
+        }
 
         private Tuple<double, double> GeoMinMax(IEnumerable<string> lines)
         {

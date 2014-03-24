@@ -1,4 +1,6 @@
-﻿using NSubstitute;
+﻿using System.Globalization;
+using System.Threading;
+using NSubstitute;
 using Parser;
 using System;
 using System.Collections.Generic;
@@ -26,6 +28,8 @@ namespace ParserTest
         [Fact]
         public void ImportTesting()
         {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-US");
+
             var fileReader = Substitute.For<IGeoFileReader>();
 
             fileReader.GetRecords().Returns(new string[] { testData });

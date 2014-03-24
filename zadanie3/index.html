@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="fizzBuzz">
+<html lang="en" ng-app>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,29 +8,24 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <script src="angular.min.js"></script>
-    <script src="controllers.js"></script>
 </head>
-<body ng-controller="fizzBuzzCtrl">
+<body ng-controller="BindModel">
     <h3>FizzBuzz!</h3>
     <div class="row">
         <div class="col-md-2">
-            <input type="text" class="form-control"  />
-        </div>
-        <div class="col-md-1">
-            <input type="submit" value="OK" name="sendBtn" class="btn btn-default" />
+            <input type="text" ng-model="input" class="form-control"  />
         </div>
     </div>
 
     <div class="row" style="margin-top:15px;">
         <div class="col-md-3">
             <table class="table table-hover">
-                <tr ng-repeat="number in numbers">
+                <tr ng-repeat="number in output(input)">
                     <td>
                         {{number.iterator}}
                     </td>
                     <td>
-                        {{number.converter}}
+                        {{number}}
                     </td>
                 </tr>
             </table>
@@ -39,9 +34,9 @@
 
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+    <script src="controllers.js"></script>
 </body>
 </html>
