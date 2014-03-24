@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "FizzBuzz Game";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -18,7 +17,7 @@
     </div>
     <div class="col-lg-6" style="margin:30px auto;">
         <ol>
-            <li ng-repeat="number in ZwrocWyniki(FBInput) | limitTo: 10">{{ number }}</li>
+            <li ng-repeat="fizzbuzz in ZwrocWyniki(FBInput)">{{ fizzbuzz }}</li>
         </ol>
     </div>
 </div>

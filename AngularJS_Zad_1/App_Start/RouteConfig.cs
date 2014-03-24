@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace Angular_zad_1
+namespace AngularJS_Zad_1
 {
     public class RouteConfig
     {

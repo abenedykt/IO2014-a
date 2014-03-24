@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Angular_zad_1.Controllers
+namespace AngularJS_Zad_1.Controllers
 {
     public class HomeController : Controller
     {
