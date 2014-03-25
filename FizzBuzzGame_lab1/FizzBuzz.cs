@@ -5,8 +5,33 @@ using System.Text;
 
 namespace TDD_lab_01
 {
+    public class ReturnType
+    {
+        public int ID { get; set; }
+        public string Value { get; set; }
+    }
     public class FizzBuzz
     {
+        public int N { get; set; }
+        public FizzBuzz()
+        {
+
+        }
+
+        public FizzBuzz(string[] args)
+        {
+            N = Convert.ToInt32(args[0]);
+        }
+
+        public IEnumerable<ReturnType> ReturnCollection()
+        {
+            var tempCollection = new List<ReturnType>();
+            for (int i = 0; i < N; i++)
+            {
+                tempCollection.Add(new ReturnType{ ID = i+1, Value = Play(i+1).ToString()});
+            }
+            return tempCollection;
+        } 
         public object Play(int p)
         {
             #region switche

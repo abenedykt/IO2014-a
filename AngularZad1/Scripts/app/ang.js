@@ -1,9 +1,24 @@
-﻿var fizzBuzzApp = angular.module('fizzBuzzApp', []);
+﻿var fizzBuzzController = angular.module('fizzBuzzApp', []);
 
-fizzBuzzApp.controller('FBListCtrl', function ($scope) {
-    $scope.numbers = [1, 2, "Fizz", 4, "Buzz", 6, 7, 8, "Fizz", "Buzz"];
+fizzBuzzController.factory('dataFactory', ['$http', function ($http) {
 
-    $scope.ZwrocWyniki = function (index) {
-        return $scope.numbers.slice(0, index);
+    var urlBase = 'api/FizzBuzz/';
+    var dataFactory = {};
+
+    dataFactory.getFb = function (id) {
+        return $http.get(urlBase + id);
     };
-});
+
+    return dataFactory;
+}]);
+
+fizzBuzzController.controller('FBListCtrl', ['$scope', 'dataFactory',
+        function ($scope, dataFactory) {
+            $scope.zapytka = function (index) {
+                dataFactory.getFb(index).success(function (data) {
+                    $scope.numbers = data;
+                });
+            };
+
+
+        }]);

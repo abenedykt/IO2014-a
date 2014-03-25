@@ -1,26 +1,23 @@
 ﻿@{
-    ViewBag.Title = "FizzBuzz Game UI";
+    ViewBag.Title = "FizzBuzz Game";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
 <div class="container">
     <header>
-        <h1 style="margin: 20px auto; text-align:center;"> FizzBuzz Game UI</h1>
+        <h1 style="margin: 20px auto;text-align:center;"> FizzBuzz Game</h1>
     </header>
-
     <div class="col-lg-6">
         <div class="input-group" style="margin: 50px;">
             <input type="text" ng-model="FBInput" class="form-control">
             <span class="input-group-btn">
-                <button class="btn btn-primary" type="button">Wylicz!</button>
+                <button class="btn btn-primary" ng-click="zapytka(FBInput)" type="button">Wylicz!</button>
             </span>
-        </div>
+        </div><!-- /input-group -->
     </div>
-
     <div class="col-lg-6" style="margin:30px auto;">
         <ol>
-            <li ng-repeat="number in ZwrocWyniki(FBInput) | limitTo: 10">{{ number }}</li>
+            <li ng-repeat="fizzbuzz in numbers">{{ fizzbuzz.Value }}</li>
         </ol>
     </div>
 </div>
