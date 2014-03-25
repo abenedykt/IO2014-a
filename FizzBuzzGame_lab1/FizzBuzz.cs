@@ -5,6 +5,7 @@ using System.Text;
 
 namespace TDD_lab_01
 {
+<<<<<<< HEAD
     public class ReturnType
     {
         public int ID { get; set; }
@@ -32,6 +33,10 @@ namespace TDD_lab_01
             }
             return tempCollection;
         } 
+=======
+    public class FizzBuzz
+    {
+>>>>>>> d4ba2f13a3e3406f39a7d44dcd8fc1375c220d56
         public object Play(int p)
         {
             #region switche

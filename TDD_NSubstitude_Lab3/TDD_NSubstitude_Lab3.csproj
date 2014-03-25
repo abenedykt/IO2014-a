@@ -48,6 +48,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+=======
+    <Compile Include="Class1.cs" />
+>>>>>>> d4ba2f13a3e3406f39a7d44dcd8fc1375c220d56
     <Compile Include="GeoImport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

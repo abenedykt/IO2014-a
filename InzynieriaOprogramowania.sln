@@ -9,22 +9,33 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzzGame_lab1", "FizzBu
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{72E9E9F5-2CF0-4609-8432-72D33AE4BD37}"
 	ProjectSection(SolutionItems) = preProject
+<<<<<<< HEAD
 		.nuget\NuGet.Config = .nuget\NuGet.Config
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
+=======
+>>>>>>> d4ba2f13a3e3406f39a7d44dcd8fc1375c220d56
 		.nuget\packages.config = .nuget\packages.config
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI lab 2", "UI lab 2\UI lab 2.csproj", "{6887ABEA-0978-47A7-8720-BDF6549ADFFD}"
 EndProject
+<<<<<<< HEAD
+=======
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDD_NSubstitude_Lab3", "TDD_NSubstitude_Lab3\TDD_NSubstitude_Lab3.csproj", "{14F0B33B-1D23-49B6-B6BF-F242487A3D44}"
+EndProject
+>>>>>>> d4ba2f13a3e3406f39a7d44dcd8fc1375c220d56
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zadanie GEO - Lab3", "Zadanie GEO - Lab3\Zadanie GEO - Lab3.csproj", "{F452C166-F0E1-431E-833B-55362528B424}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geo.Test", "Geo.Test\Geo.Test.csproj", "{906DB5E6-1E48-4561-9855-418CA7496468}"
 EndProject
+<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularZad1", "AngularZad1\AngularZad1.csproj", "{B9EA909C-C08A-445B-A437-C1A2DD192257}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geo.Test2", "Geo.Test2\Geo.Test2.csproj", "{C1EF8210-4277-49F6-BE8E-D53879C8B1FC}"
 EndProject
+=======
+>>>>>>> d4ba2f13a3e3406f39a7d44dcd8fc1375c220d56
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +54,13 @@ Global
 		{6887ABEA-0978-47A7-8720-BDF6549ADFFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6887ABEA-0978-47A7-8720-BDF6549ADFFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6887ABEA-0978-47A7-8720-BDF6549ADFFD}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
+=======
+		{14F0B33B-1D23-49B6-B6BF-F242487A3D44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14F0B33B-1D23-49B6-B6BF-F242487A3D44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14F0B33B-1D23-49B6-B6BF-F242487A3D44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14F0B33B-1D23-49B6-B6BF-F242487A3D44}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> d4ba2f13a3e3406f39a7d44dcd8fc1375c220d56
 		{F452C166-F0E1-431E-833B-55362528B424}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F452C166-F0E1-431E-833B-55362528B424}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F452C166-F0E1-431E-833B-55362528B424}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,6 +69,7 @@ Global
 		{906DB5E6-1E48-4561-9855-418CA7496468}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{906DB5E6-1E48-4561-9855-418CA7496468}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{906DB5E6-1E48-4561-9855-418CA7496468}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
 		{B9EA909C-C08A-445B-A437-C1A2DD192257}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B9EA909C-C08A-445B-A437-C1A2DD192257}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9EA909C-C08A-445B-A437-C1A2DD192257}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -59,6 +78,8 @@ Global
 		{C1EF8210-4277-49F6-BE8E-D53879C8B1FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1EF8210-4277-49F6-BE8E-D53879C8B1FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1EF8210-4277-49F6-BE8E-D53879C8B1FC}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+>>>>>>> d4ba2f13a3e3406f39a7d44dcd8fc1375c220d56
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
