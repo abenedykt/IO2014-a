@@ -47,7 +47,7 @@ namespace Geo
                 }
                 catch (FormatException)
                 {
-                    throw new FormatException();
+                    throw;
                 }
             }
 
@@ -99,7 +99,7 @@ namespace Geo
             }
             catch (FormatException)
             {
-                throw new FormatException();
+                throw;
             }
 
             return result;
