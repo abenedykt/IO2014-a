@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>FizzBazz</h2>
+
+@using (@Html.BeginForm("FizzBazz", "Home", FormMethod.Get))
+{
+    @Html.TextBox("ile")
+    <input type="submit" value="Kliknij!" />
+}

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace tdd_1a
+namespace tdd
 {
     public class FIZZBUZZTest
     {
