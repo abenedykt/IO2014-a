@@ -44,8 +44,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\IApplication\IApplication.csproj">
-      <Project>{9b4c5100-7162-48fd-ad04-5bdefe6da935}</Project>
+    <ProjectReference Include="..\IApplication\IApplication.csproj">
+      <Project>{978928dc-e792-4dee-99cb-0bdc66ab4bc4}</Project>
       <Name>IApplication</Name>
     </ProjectReference>
     <ProjectReference Include="..\IRepository\IRepository.csproj">

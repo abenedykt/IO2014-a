@@ -145,13 +145,13 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\IApplication\IApplication.csproj">
-      <Project>{9b4c5100-7162-48fd-ad04-5bdefe6da935}</Project>
-      <Name>IApplication</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Application\Application.csproj">
       <Project>{097376f1-f1ee-47fc-953b-3fc21f49f951}</Project>
       <Name>Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IApplication\IApplication.csproj">
+      <Project>{978928dc-e792-4dee-99cb-0bdc66ab4bc4}</Project>
+      <Name>IApplication</Name>
     </ProjectReference>
     <ProjectReference Include="..\IRepository\IRepository.csproj">
       <Project>{5b8d6f18-e9ef-4114-a13a-d082b8ecaabd}</Project>
