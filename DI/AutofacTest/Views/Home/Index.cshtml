@@ -1,0 +1,16 @@
+﻿@model IEnumerable<IApplication.IEvent>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div>
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>@item.Name</li>
+        }
+    </ul>
+    
+</div>
