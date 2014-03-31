@@ -15,6 +15,7 @@ namespace TDD_Lab_01
         
         public int N { get; set; }
 
+
         public FissBass()
         {
 
