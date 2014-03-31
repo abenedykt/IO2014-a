@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TDD_lab_01
 {
-<<<<<<< HEAD
+
     public class ReturnType
     {
         public int ID { get; set; }
@@ -29,53 +29,64 @@ namespace TDD_lab_01
             var tempCollection = new List<ReturnType>();
             for (int i = 0; i < N; i++)
             {
-                tempCollection.Add(new ReturnType{ ID = i+1, Value = Play(i+1).ToString()});
+                tempCollection.Add(new ReturnType { ID = i + 1, Value = Play(i + 1).ToString() });
             }
             return tempCollection;
-        } 
-=======
-    public class FizzBuzz
-    {
->>>>>>> d4ba2f13a3e3406f39a7d44dcd8fc1375c220d56
-        public object Play(int p)
+        }
+
+        private object Play(int p)
         {
-            #region switche
+            throw new NotImplementedException();
+        }
 
-            switch (p % 15)
+        public class FizzBuzzCs
+        {
+
+            public object Play(int p)
             {
-                case 0:
-                    return "FizzBuzz";
-                case 3:
-                    return "Fizz";
-                case 6:
-                    return "Fizz";
-                case 5:
-                    return "Buzz";
-                case 10:
-                    return "Buzz";
-                default:
-                    return p.ToString();
-            }
+                #region switche
 
-            #endregion
-            #region IFy
-            //if (p % 15 == 0)
-            //{
-            //    return "FizzBuzz";
-            //}
-            //else if(p % 3 == 0)
-            //{
-            //    return "Fizz";
-            //} 
-            //else if(p % 5 == 0)
-            //{
-            //    return "Buzz";
-            //}
-            //else
-            //{
-            //    return p.ToString();
-            //}
-            #endregion
+                switch (p % 15)
+                {
+                    case 0:
+                        return "FizzBuzz";
+                    case 3:
+                        return "Fizz";
+                    case 6:
+                        return "Fizz";
+                    case 5:
+                        return "Buzz";
+                    case 10:
+                        return "Buzz";
+                    default:
+                        return p.ToString();
+                }
+
+                #endregion
+                #region IFy
+                //if (p % 15 == 0)
+                //{
+                //    return "FizzBuzz";
+                //}
+                //else if(p % 3 == 0)
+                //{
+                //    return "Fizz";
+                //} 
+                //else if(p % 5 == 0)
+                //{
+                //    return "Buzz";
+                //}
+                //else
+                //{
+                //    return p.ToString();
+                //}
+                #endregion
+            }
+        }
+
+        internal object Play(int i)
+        {
+            throw new NotImplementedException();
         }
     }
 }
