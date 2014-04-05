@@ -5,11 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tdd", "tdd\tdd.csproj", "{7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "konsola", "konsola\konsola.csproj", "{683E3A77-8D9D-486D-B9E9-CBA88DE15EAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mock", "mock\mock.csproj", "{7E074BE8-3F4B-4C6F-A556-B1A1A8708A56}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "angular", "angular\angular.csproj", "{BFF54111-BDCF-41B9-9364-BB282AAFC568}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testy", "testy\testy.csproj", "{ED0D6631-AFE0-49FA-9EF3-704E137FB588}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mvc", "mvc\mvc.csproj", "{A87B79E0-226E-49CA-ADC4-F0920A550D4B}"
 EndProject

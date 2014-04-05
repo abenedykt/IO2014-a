@@ -7,7 +7,7 @@ using Xunit;
 
 namespace tdd
 {
-    public class FIZZBUZZTest
+    public class FizzBazzTest
     {
         [Fact]
         public void Wypisuje1Dla1()
@@ -24,7 +24,7 @@ namespace tdd
             var game = new FizzBazz();
             string res = "";
             res = game.Play(3);
-            Assert.Equal("FIZZ", res);
+            Assert.Equal("Fizz", res);
         }
 
         [Fact]
@@ -33,7 +33,7 @@ namespace tdd
             var game = new FizzBazz();
             string res = "";
             res = game.Play(5);
-            Assert.Equal("BUZZ", res);
+            Assert.Equal("Bazz", res);
         }
 
         [Fact]
@@ -42,7 +42,7 @@ namespace tdd
             var game = new FizzBazz();
             string res = "";
             res = game.Play(15);
-            Assert.Equal("FIZZBUZZ", res);
+            Assert.Equal("FizzBazz", res);
         }
     }
 }

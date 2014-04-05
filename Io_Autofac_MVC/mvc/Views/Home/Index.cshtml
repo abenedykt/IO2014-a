@@ -1,0 +1,17 @@
+﻿@using IApp
+@model IEnumerable<IEvent>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Events</title>
+</head>
+<body>
+    <p>List of events:</p>
+    <ul>
+        @foreach (IEvent name in Model)
+        {
+            <li>@name.Name</li>
+        }
+    </ul>
+</body>
+</html>

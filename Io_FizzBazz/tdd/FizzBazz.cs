@@ -10,27 +10,27 @@ namespace tdd
         public string Play(int p)
         {
             //if (p % 15 == 0)
-            //    return "FIZZBUZZ";
+            //    return "FizzBazz";
             //else if (p % 3 == 0)
-            //    return "FIZZ";
+            //    return "Fizz";
             //else if (p % 5 == 0)
-            //    return "BUZZ";
+            //    return "Bazz";
             //else
             //    return p.ToString();
             string ret = "";
             switch (p % 15)
             {
                 case 0:
-                    ret = "FIZZBUZZ";
+                    ret = "FizzBazz";
                     break;
                 case 3:
                 case 6:
                 case 9:
-                    ret = "FIZZ";
+                    ret = "Fizz";
                     break;
                 case 5:
                 case 10:
-                    ret = "BUZZ";
+                    ret = "Bazz";
                     break;
                 default:
                     ret = p.ToString();

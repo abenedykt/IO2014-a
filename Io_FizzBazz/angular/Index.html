@@ -6,14 +6,14 @@
     <script src="Scripts/bootstrap.js"></script>
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <script>
-        var fizbuzzy = function ($scope) {
+        var fizzbazzy = function ($scope) {
             $scope.wyniki = [{ 'index': 1 }, { 'index': 2 }, { 'index': 'Fizz' }, { 'index': 4 },
-                { 'index': 'Buzz' }, { 'index': 'Fizz' }, { 'index': 7 }, { 'index': 8 },
-                { 'index': 'Fizz' }, { 'index': 'Buzz' }, { 'index': 11 }, { 'index': 'Fizz' },
-                { 'index': 13 }, { 'index': 14 }, { 'index': "Fizz Buzz" }];
+                { 'index': 'Bazz' }, { 'index': 'Fizz' }, { 'index': 7 }, { 'index': 8 },
+                { 'index': 'Fizz' }, { 'index': 'Bazz' }, { 'index': 11 }, { 'index': 'Fizz' },
+                { 'index': 13 }, { 'index': 14 }, { 'index': "FizzBazz" }];
         };
         var aplikacja = angular.module('aplikacja', []);
-        aplikacja.controller('kontroler', fizbuzzy);
+        aplikacja.controller('kontroler', fizzbazzy);
     </script>
     <meta charset="utf-8">
     <title>Fizz Buzz</title>
