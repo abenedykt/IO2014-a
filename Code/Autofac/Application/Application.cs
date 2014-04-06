@@ -8,7 +8,7 @@ using IRepositoryC;
 
 namespace ApplicationC
 {
-    public class Application: IApplication
+    public class Application : IApplication
     {
         private readonly IRepository repository;
 
@@ -17,9 +17,11 @@ namespace ApplicationC
             this.repository = repository;
         }
 
-        public string Events()
+        public IEnumerable<IEvent> Events()
         {
-            throw new NotImplementedException();
+            var values = repository.GetAll();
+
+            return values.Select(n => new Event { Name = n });
         }
     }
 }

@@ -11,7 +11,7 @@ namespace RepositoryC
     {
         public IEnumerable<string> GetAll()
         {
-            return new[] { "Jeden", "Dwa"};
+            return new[] { "Jeden", "Dwa", "Trzy"};
         }
     }
 }

@@ -19,7 +19,7 @@ namespace WebApplication.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            return View(application.Events());
         }
     }
 }
