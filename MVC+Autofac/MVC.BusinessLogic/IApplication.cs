@@ -1,6 +1,10 @@
-﻿namespace MVC.BusinessLogic
+﻿using System.Collections;
+using System.Collections.Generic;
+
+namespace MVC.BusinessLogic
 {
-    interface IApplication
+    public interface IApplication
     {
+        IEnumerable<IEvent> Events();
     }
 }

@@ -164,7 +164,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -236,6 +235,18 @@
     <ProjectReference Include="..\MVC.ApplicationEvents\MVC.ApplicationEvents.csproj">
       <Project>{99dc8bb1-afde-4922-b519-e9a0941fab0e}</Project>
       <Name>MVC.ApplicationEvents</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MVC.BusinessLogic\MVC.BusinessLogic.csproj">
+      <Project>{ce2aa626-41b4-46ab-988c-31366b78d8f6}</Project>
+      <Name>MVC.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MVC.IRepository\MVC.IRepository.csproj">
+      <Project>{4BA453CF-C9F3-4AC0-B185-C73A8B965035}</Project>
+      <Name>MVC.IRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MVC.TxtRepository\MVC.TxtRepository.csproj">
+      <Project>{4D392FC7-4DB5-44FA-A3D6-776992DE7009}</Project>
+      <Name>MVC.TxtRepository</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
