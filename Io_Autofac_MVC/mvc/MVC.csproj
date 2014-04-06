@@ -146,7 +146,7 @@
       <Project>{e40ea176-21c9-403f-8364-144687f66fb5}</Project>
       <Name>App</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GetAll\TextRepo.csproj">
+    <ProjectReference Include="..\TextRepo\TextRepo.csproj">
       <Project>{1babe288-66f9-485b-96a0-aa15f71ca31a}</Project>
       <Name>TextRepo</Name>
     </ProjectReference>
