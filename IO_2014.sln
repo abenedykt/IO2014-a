@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDD_Lab_02.Test", "TDDD_Lab
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularJS_Zad_1", "AngularJS_Zad_1\AngularJS_Zad_1.csproj", "{BF88C99B-7355-4FC7-9D2E-2D410E2535BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_05_LSP", "Lab_05_LSP\Lab_05_LSP.csproj", "{87BF46CB-F400-4D2A-9CB9-5A0FFC792738}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{BF88C99B-7355-4FC7-9D2E-2D410E2535BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF88C99B-7355-4FC7-9D2E-2D410E2535BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF88C99B-7355-4FC7-9D2E-2D410E2535BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87BF46CB-F400-4D2A-9CB9-5A0FFC792738}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87BF46CB-F400-4D2A-9CB9-5A0FFC792738}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87BF46CB-F400-4D2A-9CB9-5A0FFC792738}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87BF46CB-F400-4D2A-9CB9-5A0FFC792738}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
