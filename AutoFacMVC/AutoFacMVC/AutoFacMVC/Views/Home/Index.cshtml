@@ -1,0 +1,15 @@
+﻿@model IEnumerable<BussinesLogic.IEvent>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="col-md-12">
+
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>@item.Name</li>
+        }
+    </ul>
+
+</div>
