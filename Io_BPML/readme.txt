@@ -1,0 +1,1 @@
+Dodałem dwie wersje, bo zakończenie ścieżki po reakcji na decyzję klienta było niesprecyzowane.
