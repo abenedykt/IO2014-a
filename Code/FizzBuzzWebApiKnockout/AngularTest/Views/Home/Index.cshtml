@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<div>
+    <h3>FizzBuzz</h3>
+    <hr />
+    <div class="row">
+        <form>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label>Wprowadź liczbę</label>
+                    <input type="text" data-bind='value: input, event: {change: change}' class="form-control" />
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label>Wynik</label>
+                    <ul data-bind="foreach: result">
+                        <li>
+                            <span data-bind="text: $data"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script src="~/Scripts/app/main.js"></script>
+}
