@@ -8,7 +8,7 @@ using AbstractNonInstability;
 
 namespace NonAbstractInstability
 {
-    public class Instable1 : Foo
+    public class Instable1 : IAbstract
     {
 
     }

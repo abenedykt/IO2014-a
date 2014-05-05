@@ -6,5 +6,8 @@ using System.Threading.Tasks;
 
 namespace AbstractNonInstability
 {
-    public interface Foo { }
+    public interface IAbstract
+    {
+        
+    }
 }
