@@ -3,16 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LG;
+using LD;
 
-namespace Konsola
+namespace PD
 {
-    public class Program
+    public class PDClass2
     {
-        public static void Main(string[] args)
-        {
-        }
-
-        public void Method(List<int> l)
+        public void Method(LGInterface1 i1, LGInterface2 i2, LDClass1 c1)
         {
         }
     }

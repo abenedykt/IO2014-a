@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PD
+namespace LG
 {
-    public class Class1
+    public interface LGInterface1
     {
-        public void Method(Class2 c)
-        {
-        }
+        LGInterface2 Method();
     }
 }

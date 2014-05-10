@@ -39,12 +39,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Class2.cs" />
+    <Compile Include="PDClass20.cs" />
+    <Compile Include="PDClass19.cs" />
+    <Compile Include="PDClass18.cs" />
+    <Compile Include="PDClass17.cs" />
+    <Compile Include="PDClass16.cs" />
+    <Compile Include="PDClass15.cs" />
+    <Compile Include="PDClass14.cs" />
+    <Compile Include="PDClass13.cs" />
+    <Compile Include="PDClass9.cs" />
+    <Compile Include="PDClass12.cs" />
+    <Compile Include="PDClass11.cs" />
+    <Compile Include="PDClass10.cs" />
+    <Compile Include="PDClass8.cs" />
+    <Compile Include="PDClass5.cs" />
+    <Compile Include="PDClass7.cs" />
+    <Compile Include="PDClass6.cs" />
+    <Compile Include="PDClass4.cs" />
+    <Compile Include="PDClass3.cs" />
+    <Compile Include="PDClass1.cs" />
+    <Compile Include="PDClass2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LD\LD.csproj">
+      <Project>{e87f2b09-3908-4178-9dd4-6015c400c597}</Project>
+      <Name>LD</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LG\LG.csproj">
+      <Project>{a798e2a6-2286-47dd-9d55-e5420f235c6b}</Project>
+      <Name>LG</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace LG
 {
-    public interface Interface2
+    public interface LGInterface2
     {
-        void Method();
+        LGInterface1 Method();
     }
 }

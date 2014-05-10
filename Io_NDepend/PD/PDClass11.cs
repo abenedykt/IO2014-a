@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LG;
+using LD;
 
-namespace LD
+namespace PD
 {
-    public class Class1
+    public class PDClass11
     {
-        public IEnumerable<string> Method(LG.Interface1 ie)
+        public void Method(LGInterface1 i1, LGInterface2 i2, LDClass1 c1)
         {
-            return new List<string>();
         }
     }
 }

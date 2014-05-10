@@ -39,8 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interface1.cs" />
-    <Compile Include="Interface2.cs" />
+    <Compile Include="LGInterface1.cs" />
+    <Compile Include="LGInterface2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

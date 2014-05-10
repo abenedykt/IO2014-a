@@ -39,18 +39,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Class2.cs" />
+    <Compile Include="LDClass1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="readme.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\LG\LG.csproj">
-      <Project>{a798e2a6-2286-47dd-9d55-e5420f235c6b}</Project>
-      <Name>LG</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

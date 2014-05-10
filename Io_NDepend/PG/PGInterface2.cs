@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace PG
 {
-    public interface Interface
+    public interface PGInterface2
     {
+        void Method();
     }
 }

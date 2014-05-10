@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LG;
+using LD;
 
 namespace PD
 {
-    public class Class2
+    public class PDClass6
     {
-        public void Method(Class1 c)
+        public void Method(LGInterface1 i1, LGInterface2 i2, LDClass1 c1)
         {
         }
     }

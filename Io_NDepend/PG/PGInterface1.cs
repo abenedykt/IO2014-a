@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LG
+namespace PG
 {
-    public interface Interface1
+    public interface PGInterface1
     {
         void Method();
     }
