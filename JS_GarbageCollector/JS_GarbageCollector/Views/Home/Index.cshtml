@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <h3>Fajny Garbage Collector</h3>
+    </div>
+
+</div>
+
+@section scripts {
+    <script type="text/javascript">
+        var person = { firstName: "John", lastName: "Doe", age: 50, eyeColor: "blue" };
+
+        document.write(person.firstName);
+
+        timObject = {
+            property1: "Hello",
+            property2: "MmmMMm",
+            property3: ["mmm", 2, 3, 6, "kkk"],
+            method1: function() { alert("Method had been called" + this.property1) }
+        };
+
+        timObject.method1();
+        alert(timObject.property3[2]) // will yield 3
+
+        var circle = { x: 0, y: 0, radius: 2 }
+
+        // nesting is no problem.
+        var rectangle = {
+            upperLeft: { x: 2, y: 2 },
+            lowerRight: { x: 4, y: 4 }
+        }
+
+        alert(rectangle.upperLeft.x) // will yield 2
+        var tab = Array;
+        var i = 0;
+        while (i < 100) {
+            i++;
+            tab[i] = {
+                first : "asdasd", openDatabaseSync : "asd"
+            };
+        }
+
+    </script>
+    
+
+}
