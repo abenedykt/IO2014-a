@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h2>Index</h2>
+<script src="~/Scripts/jquery-2.1.0.js"></script>
+
+<script type="text/javascript">
+    function makeABigObject() {
+        var bigArray = new Array(20000);
+        alert("Garbage1");
+    }
+
+    function init() {
+        var bigString = new Array(1000).join('xxx');
+       alert("Garbage2");
+    }
+</script>
+
+<div>
+    <button onclick="init">Garbage1</button>
+
+</div>
+
+<div>
+    <button onclick="makeABigObject">Garbage2</button>
+
+</div>
+ 
+
