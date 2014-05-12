@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<InfoWarnings>
+  <Info>Begin full analysis with NDepend v5.2.1.8320</Info>
+  <Info>No Baseline for Comparison loaded.</Info>
+  <Warning>Can't load the assembly {ClassLibrary1}:
+Can't find the .NET assembly {ClassLibrary1} in specified folders. 
+Has it been compiled properly? 
+Is the NDepend project missing the containing folder of the .NET assembly?</Warning>
+  <Warning>Can't load the assembly {ClassLibrary2}:
+Can't find the .NET assembly {ClassLibrary2} in specified folders. 
+Has it been compiled properly? 
+Is the NDepend project missing the containing folder of the .NET assembly?</Warning>
+  <Warning>Can't load the assembly {ClassLibrary3}:
+Can't find the .NET assembly {ClassLibrary3} in specified folders. 
+Has it been compiled properly? 
+Is the NDepend project missing the containing folder of the .NET assembly?</Warning>
+  <Info>Concurrent mode</Info>
+  <Info>.NET Assemblies loaded from {C:\Users\student\Documents\Visual Studio 2013\Projects\PRudyk\WebApplication1\WebApplication1\bin} 
+   WebApplication1.dll   v1.0.0.0
+   System.Web.Mvc.dll   v5.0.0.0
+   Microsoft.AspNet.Identity.EntityFramework.dll   v1.0.0.0
+   System.Web.Optimization.dll   v1.1.0.0
+   Owin.dll   v1.0.0.0
+   Microsoft.AspNet.Identity.Core.dll   v1.0.0.0
+   Microsoft.Owin.dll   v2.0.0.0
+   Microsoft.Owin.Security.Cookies.dll   v2.0.0.0
+   Microsoft.Owin.Security.dll   v2.0.0.0
+   Microsoft.AspNet.Identity.Owin.dll   v1.0.0.0
+   EntityFramework.dll   v6.0.0.0
+   Microsoft.Owin.Host.SystemWeb.dll   v2.0.0.0</Info>
+  <Info>.NET Assemblies loaded from {C:\Windows\Microsoft.NET\Framework\v4.0.30319} 
+   mscorlib.dll   v4.0.0.0
+   System.Web.dll   v4.0.0.0
+   System.Core.dll   v4.0.0.0
+   Microsoft.CSharp.dll   v4.0.0.0
+   System.ComponentModel.DataAnnotations.dll   v4.0.0.0</Info>
+  <Warning>No application or third party assembly found in directory {C:\Windows\Microsoft.NET\Framework\v4.0.30319\WPF}</Warning>
+  <Info>11 source files parsed ; all source files found ; all source files in-sync with PDB</Info>
+  <Info>0 code rule has been extracted from code.</Info>
+  <Info>No dependency cycle detected in assemblies referencement graph.</Info>
+  <Info>05-05-2014 15:17:45 Analyse dependencies of your application.</Info>
+  <Info>05-05-2014 15:17:54 Log trend metrics values.</Info>
+  <Info>05-05-2014 15:17:54 Execute queries and rules</Info>
+  <Info>05-05-2014 15:17:56 NDepend analysis done. Duration: 00:11</Info>
+  <Info>05-05-2014 15:17:56 Building the report (standard).</Info>
+</InfoWarnings>

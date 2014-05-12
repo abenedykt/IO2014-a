@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<InfoWarnings>
+  <Info>Begin full analysis with NDepend v5.2.1.8320</Info>
+  <Info>No Baseline for Comparison loaded.</Info>
+  <Info>Concurrent mode</Info>
+  <Info>.NET Assemblies loaded from {C:\Users\student\Documents\Visual Studio 2013\Projects\PRudyk\WebApplication1\ClassLibrary1\bin\Debug} 
+   ClassLibrary3.dll   v1.0.0.0
+   ClassLibrary4.dll   v1.0.0.0
+   ClassLibrary1.dll   v1.0.0.0
+   ClassLibrary2.dll   v1.0.0.0</Info>
+  <Info>.NET Assembly loaded from {C:\Windows\Microsoft.NET\Framework\v4.0.30319} 
+   mscorlib.dll   v4.0.0.0</Info>
+  <Warning>No application or third party assembly found in directory {C:\Windows\Microsoft.NET\Framework\v4.0.30319\WPF}</Warning>
+  <Warning>The source file {c:\Users\student\Documents\Visual Studio 2013\Projects\PRudyk\WebApplication1\ClassLibrary1\Class1.cs} (last modified 2014-05-05 15:45:12) and the PDB file of the assembly {ClassLibrary1} (last modified 2014-05-05 15:40:12) are not in-sync.</Warning>
+  <Info>6 source files parsed ; all source files found ; 1 source file not in-sync with PDB</Info>
+  <Info>0 code rule has been extracted from code.</Info>
+  <Info>No dependency cycle detected in assemblies referencement graph.</Info>
+  <Info>05-05-2014 15:46:55 Analyse dependencies of your application.</Info>
+  <Info>05-05-2014 15:46:55 Execute queries and rules</Info>
+  <Info>05-05-2014 15:46:56 NDepend analysis done. Duration: 00:01</Info>
+  <Info>05-05-2014 15:46:56 Building the report (standard).</Info>
+</InfoWarnings>
