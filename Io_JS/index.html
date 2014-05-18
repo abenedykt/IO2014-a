@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+	<head>
+	</head>
+	<body>
+		<p>Coś</p>
+		<p id="myId"></p>
+		<script>
+			var self=this;
+			self.n=100000;			
+			self.delay=1000;
+			for(var i=0; true; i++)
+			{
+				var arr=[];								
+				setTimeout(function()
+				{									
+					document.getElementById("myId").innerHTML=i.toString();
+					arr.length=n;
+				},delay);
+				if(i==n)
+					break;
+			}
+		</script>
+	</body>
+</html>
