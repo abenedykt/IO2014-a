@@ -1,0 +1,7 @@
+intercetor
+
+strona MVC
+autofac
+kontroler konstruktor z parametrem ktory przejmuje inny obiekt i wywoluje zewnetrzna metode
+zrobic interceptor ktory bedzie logowa³ wejscie i wyjscie do zewnetrznej metody (np w debagu - "uruchomiono metode", "zamknieto metode")
+
