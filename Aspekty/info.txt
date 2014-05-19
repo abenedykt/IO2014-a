@@ -1,0 +1,4 @@
+- tworzymy apke mvc
+- instalujemy autofaca
+- tworzymy controller, który korzysta z wstrzyknietego obiektu
+- tworzymy interceptor ( logujacy do trace ) wyjscie i wejscie tej metody
