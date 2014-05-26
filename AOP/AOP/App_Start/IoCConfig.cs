@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using Autofac;
 using Autofac.Integration.Mvc;
-using Autofac.Integration;
+using Castle.DynamicProxy;
 using ExampleClass;
 
 namespace AOP.App_Start
@@ -62,13 +59,11 @@ namespace AOP.App_Start
             //builder.RegisterModule<AutofacWebTypesModule>();
 
             #endregion
-            
             builder.RegisterType<Data>().As<IData>();
-            builder.Register(c => new DataLogger(Console.Out))
-            .Named("log-daat");
-
-            builder.RegisterModule(new StandardInterceptionModule());
+            builder.Register(c => new DataLogger(Console.Out)).Named<IInterceptor>("log-data");
             builder.RegisterType<ExampleClass.ExampleClass>().As<IExampleClass>();
+            
+            
 
             #region Set the MVC dependency resolver to use Autofac
             var container = builder.Build();

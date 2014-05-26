@@ -1,5 +1,5 @@
 ﻿using System;
-using Castle;
+using Autofac.Extras.DynamicProxy2;
 
 namespace ExampleClass
 {

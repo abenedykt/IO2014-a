@@ -19,7 +19,7 @@ namespace AOP
 
         public void Intercept(IInvocation invocation)
         {
-            _output.Write("Calling method {0} with parameters {1}... ",
+            _output.Write("Data method {0} with parameters {1}... ",
                 invocation.Method.Name,
                 string.Join(", ", invocation.Arguments.Select(a => (a ?? "").ToString()).ToArray()));
 
