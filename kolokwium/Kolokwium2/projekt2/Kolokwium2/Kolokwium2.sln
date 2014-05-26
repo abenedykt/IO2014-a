@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZadanieMvc", "ZadanieMvc\ZadanieMvc.csproj", "{FF44BC4C-8BD0-498D-A657-C9A5C1915A77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogikaZadanieMvc", "LogikaZadanieMvc\LogikaZadanieMvc.csproj", "{4E065B7A-B345-4D35-93EA-EF18350339F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{838D38A7-C220-4429-8765-AC7F7BF4580A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF44BC4C-8BD0-498D-A657-C9A5C1915A77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF44BC4C-8BD0-498D-A657-C9A5C1915A77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF44BC4C-8BD0-498D-A657-C9A5C1915A77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF44BC4C-8BD0-498D-A657-C9A5C1915A77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E065B7A-B345-4D35-93EA-EF18350339F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E065B7A-B345-4D35-93EA-EF18350339F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E065B7A-B345-4D35-93EA-EF18350339F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E065B7A-B345-4D35-93EA-EF18350339F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{838D38A7-C220-4429-8765-AC7F7BF4580A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{838D38A7-C220-4429-8765-AC7F7BF4580A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{838D38A7-C220-4429-8765-AC7F7BF4580A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{838D38A7-C220-4429-8765-AC7F7BF4580A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
