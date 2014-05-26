@@ -2,7 +2,7 @@
 
 namespace SomeClass
 {
-    [Intercept("log-time")]
+    //[Intercept("log-time")]
     public interface ISomeStuff
     {
         void MakeSomeWork();

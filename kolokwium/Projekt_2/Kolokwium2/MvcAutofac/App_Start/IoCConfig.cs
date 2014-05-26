@@ -61,10 +61,9 @@ namespace MvcAutofac.App_Start
             //builder.RegisterModule<AutofacWebTypesModule>();
 
             #endregion
-            
-            builder.Register(c => new TimeLogger(Console.Out))
-                .Named<IInterceptor>("log-time");
-            builder.RegisterType<SomeLongRunningStuff>().As<ISomeStuff>().EnableInterfaceInterceptors();
+
+            builder.Register(c => new TimeLogger()); ;
+            builder.RegisterType<SomeLongRunningStuff>().As<ISomeStuff>().EnableInterfaceInterceptors().InterceptedBy(typeof(TimeLogger));
 
 
             #region Set the MVC dependency resolver to use Autofac
