@@ -41,8 +41,6 @@ namespace intercept.App_Start
 
             var container = builder.Build();
 
-            //var willBeIntercepted = container.Resolve<ISomeType>();
-
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
         }
     }

@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace MsTest
+namespace solucja1
 {
-    public class FizzBuzz
+    public class FizzBuzzGame
     {
         public string Play(int p)
         {
@@ -17,7 +18,7 @@ namespace MsTest
             {
                 return "Fizz";
             }
-            else if(p % 5 == 0)
+            else if (p % 5 == 0)
             {
                 return "Buzz";
             }
