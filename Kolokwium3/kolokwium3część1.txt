@@ -1,0 +1,26 @@
+1)
+Wzór na niestabilnoœæ
+
+I=Ce/(Ce + Ca)
+
+gdzie:
+
+Ce- Liczba klas od których dany obiekt jest zale¿ny im wy¿sze tym wiêksza niestabilnoœæ
+
+Ca - Przeciwieñstwo Ce liczba klas zale¿nych od danej klasy im wy¿sze tym wiêksza stabilnoœæ
+
+I- poziom niestabilnoœci waha siê od 0 do 1 
+
+komponent stabilne od 0 do 0,3 (szacunkowo)
+
+komponenty niestabilne od 0,7 do 1 (szacunkowo)
+
+
+Wzór na abstrakcyjnoœæ
+
+A=liczbaklasabtrakcyjncyh/liczbawszystkichklas
+
+Okreœla odsetek klas abstrakcyjnych do wszyskich klas, podobnie jak poziom niestabilnoœci waha siê od 0 do 1
+
+2) funkcja 1 V(g)=3 - 4 + 2=1 (0 wêz³ów decyzyjnych)  funkcja2 V(g)=1 + 1= 2 (1 wêzê³ decyzyjny)
+
