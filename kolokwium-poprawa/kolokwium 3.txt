@@ -1,0 +1,24 @@
+1)
+I = Ce / (Ce + Ca)
+Gdzie:
+Ca -> to liczba klas, które s¹ zale¿ne od badanej klasy, afferent coupling
+Ca -> to liczba klas, które uzale¿niaj¹ od siebie inne, efferent coupling
+I -> niestablinoœæ danej klasy
+
+Abstrakcyjnoœæ:
+Jest to odsetek iloœci klas abstrakcyjnych, co do wszystkich klas.
+WskaŸnik wacha siê miêdzy 0 a 1
+
+2)
+z³o¿onoœc cyklomatyczna 
+
+G = d + 1
+(d - liczba wêz³ów decyzyjnych) 
+	func_1(a,b) --> z³o¿onoœæ 1
+
+----
+(z grafu przebiegu)
+G = e - n + 2 
+(e - liczba krawêdzi / n - iloœæ wierzcho³ków)
+	func_2(a,b) --> z³o¿onoœæ 3
+
